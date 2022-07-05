@@ -37,7 +37,7 @@ class ViewController: UIViewController {
         searchBar.sizeToFit()
         searchBar.placeholder = "Search for places"
         
-        searchBar.text! += " fireside"
+        //searchBar.text! += " fireside"
         
         navigationItem.titleView = searchController?.searchBar
         definesPresentationContext = true
