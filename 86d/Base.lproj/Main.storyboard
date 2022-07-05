@@ -1,24 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wts-DQ-mM5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_6d" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="aps-9P-vQm">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7uw-Bn-Ftl"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CWD-kl-E1C"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aps-9P-vQm" secondAttribute="trailing" id="CY2-l2-ALU"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="De5-xA-B8M"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Fbh-WH-aBb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="aps-9P-vQm" secondAttribute="bottom" id="Hto-m9-x6J"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z27-c3-3Vz"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Z3w-9o-7kS"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aIt-09-wF2"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="hKu-to-wsc"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rVX-iY-Ndg"/>
+                            <constraint firstItem="aps-9P-vQm" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wLY-ZT-c5B"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="WTP-4s-V4a"/>
+                    <connections>
+                        <outlet property="mapView" destination="aps-9P-vQm" id="bov-O0-o5k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="97.767857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="s6r-I6-27B">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wts-DQ-mM5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AsH-2i-o22">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="TfV-wj-RzQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K4Q-hW-i1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="97.767857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
